@@ -1,0 +1,20 @@
+.circle {
+    vertical-align: top;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 12px;
+    cursor: pointer;
+}
+.num-input {
+    vertical-align: top;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    width: 60px;
+    margin: 0 10px;
+    text-align: center;
+}

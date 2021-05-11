@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { StoreType } from "@src/store";
-import { UserActionValue, createUserAction, createLoadingAction, LoadingActionInterface } from "@store/actions";
+import { UserActionValue, createUserAction, createLoadingAction } from "@store/actions";
 import { useHistory } from 'react-router-dom';
-import { StoreDispatch } from '@src/store';
-
-interface LoginDispatchFn {
-    (dispatch: StoreDispatch): Promise<string>;
-}
-interface LoginDispatch {
-    (fn: LoginDispatchFn): ReturnType<LoginDispatchFn>
-}
+import { StoreDispatch, PromiseDispatch } from '@src/store';
 
 const Login: React.SFC = () => {
     const [ account, setAccount ] = useState('');
     const [ password, setPassword ] = useState('');
-    const loginDispatch = useDispatch<LoginDispatch>();
+    const loginDispatch = useDispatch<PromiseDispatch>();
     const dispatch = useDispatch();
     const user = useSelector<StoreType, UserActionValue>(state => state.user);
     const history = useHistory();

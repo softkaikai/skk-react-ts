@@ -1,8 +1,11 @@
 import React from "react";
 
-const Main: React.FC = () => {
+const Main: React.FC = (props) => {
+    const style = {
+        margin: '20px'
+    }
     return (
-        <div>234</div>
+        <div style={style}>{props.children}</div>
     )
 }
 
